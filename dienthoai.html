@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let Moblie = function (battery, memoryArea1, memoryArea2, memoryArea3) {
+this.battery = battery;
+this.memoryArea1 = memoryArea1;
+this.memoryArea2 = memoryArea2;
+this.memoryArea3 = memoryArea3;
+
+this.checkStatusOnOff = function () {
+
+if (this.battery > 0) {
+return true;
+} else {
+return false;
+}
+};
+
+this.turnOn = function () {
+alert("Điện thoại đang tắt");
+};
+
+this.turnOf = function () {
+alert("Điện thoại đang bật");
+};
+
+this.charge = function () {
+alert("Sạc Pin" + this.battery++ + '%');
+};
+
+this.writeMessenger = function () {
+prompt("This is a messenger");
+};
+
+this.massengerL = function () {
+alert("messenger đã gửi");
+
+};
+this.afterUse = function () {
+alert(" Đã khởi tạo chức năng : " + this.memoryArea1 + '%');
+}
+
+};
+let mobile = new Moblie(70, 100, 100, 100);
+
+function main() {
+mobile.turnOf();
+}
+
+function main1() {
+mobile.turnOn();
+}
+
+function main2() {
+mobile.charge();
+}
+
+function main3() {
+mobile.writeMessenger();
+}
+
+function main4() {
+mobile.massengerL();
+}
+
+function main5() {
+mobile.afterUse();
+
+}
+</script>
+<font style="margin-left: 280px; color: #FF0000;" > Iphone 14 Pro max </font>
+<table border="0">
+
+  <th><button type="button" onclick="main()" style=" cursor: pointer;
+    background-color: #00FF00 ;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Điện thoại đang bật
+  </button></th>
+
+  <th><button type="button" onclick="main1()" style="cursor: pointer;
+    background-color: #800080;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Điện thoại đang tắt
+  </button></th>
+
+  <th><button type="button" onclick="main2()" style="cursor: pointer;
+    background-color: #00FFFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Sạc pin
+  </button></th>
+
+  <th><button type="button" onclick="main3()" style="cursor: pointer;
+    background-color: #FFFF00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Soạn tin nhắn
+  </button></th>
+
+  <th><button type="button" onclick="main4()" style="cursor: pointer;
+    background-color: #00FF00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Gửi tin nhắn
+  </button></th>
+
+  <th><button type="button" onclick="main5()" style="cursor: pointer;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Chức năng
+  </button></th>
+
+</table>
+
+</body>
+</html>
